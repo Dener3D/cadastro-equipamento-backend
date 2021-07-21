@@ -3,10 +3,12 @@ const cors = require('cors');
 const server = express();
 server.use(express.json());
 server.use(cors())
+require('dotenv').config();
 
 const EquipamentoRoute = require('./routes/EquipamentoRoute');
 server.use('/equipamento', EquipamentoRoute);
 
-server.listen(3333, () => {
+server.listen(3000, () => {
     console.log("API ONLINE");
+    console.log()
 });
