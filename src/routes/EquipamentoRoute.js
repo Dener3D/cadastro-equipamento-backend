@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
+require('dotenv').config();
 
 const EquipamentoController = require('../controller/EquipamentoController');
 const EquipamentoValidation = require('../middlewares/EquipamentoValidation');
+
 
 router.post('/', EquipamentoValidation, EquipamentoController.create);
 router.get('/filter/all', EquipamentoController.all);
