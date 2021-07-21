@@ -6,7 +6,7 @@ server.use(cors())
 require('dotenv').config();
 
 const EquipamentoRoute = require('./routes/EquipamentoRoute');
-server.use('/', EquipamentoRoute);
+server.use('https://cadastro-equipamento-backend.herokuapp.com/', EquipamentoRoute);
 
 server.listen(process.env.PORT || 3000, () => {
     console.log("API ONLINE");
