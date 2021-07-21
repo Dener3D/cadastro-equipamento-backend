@@ -8,7 +8,7 @@ require('dotenv').config();
 const EquipamentoRoute = require('./routes/EquipamentoRoute');
 server.use('/equipamento', EquipamentoRoute);
 
-server.listen(3000, () => {
+server.listen(process.env.PORT || 3000, () => {
     console.log("API ONLINE");
     console.log()
 });
